@@ -8,10 +8,13 @@
     "babel-loader": "^6.4.0",
     "webpack": "^2.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "webpack-dev-server": "^2.4.1"
+  },
   "scripts": {
-    "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
-    "start": "http-server",
+    "babel": "babel --presets es2015 js/main.js -o build/bundle.js",
+    "start": "webpack-dev-server --inline --hot --watch-poll",
     "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
